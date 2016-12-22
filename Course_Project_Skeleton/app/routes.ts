@@ -1,7 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-import { WelcomeComponent } from './app.welcome.component';
-import { AboutComponent } from './about.component/about.component';
+import { WelcomeComponent, AboutComponent } from './components'
 
 export const routes: ModuleWithProviders
     = RouterModule.forRoot([

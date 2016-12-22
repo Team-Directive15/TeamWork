@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.main.component';
-import { WelcomeComponent } from './app.welcome.component';
-import { AboutComponent } from './about.component/about.component';
+import{AboutComponent,AppComponent,WelcomeComponent} from './components'
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './config/firebase-config';
