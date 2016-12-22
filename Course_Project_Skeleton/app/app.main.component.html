@@ -12,41 +12,46 @@
             <div class="col-lg-4">
                 <h1 class="page-title">No name project</h1>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-6">
                 <img src="" alt="no image" class="pull-right">
                 <ul class="nav nav-pills" id="header-navigation">
                     <li class="active">
-                        <a href="" id="home-btn">Home</a>
+                        <a [routerLink]="['']" id="home-btn">Home</a>
                     </li>
                     <li class="active">
-                        <a href="" id="users-btn">Users</a>
+                        <a [routerLink]="['']" id="users-btn">Users</a>
                     </li>
                     <li class="active">
-                        <a href="" id="contact-btn">Contact us</a>
+                        <a [routerLink]="['']" id="contact-btn">Contact us</a>
                     </li>
                     <li class="active">
-                        <a href="" id="login-btn">Login</a>
+                        <a [routerLink]="['about']" id="about-btn">About</a>
                     </li>
                     <li class="active">
-                        <a href="" id="register-btn">Register</a>
+                        <a [routerLink]="['']" id="login-btn">Login</a>
+                    </li>
+                    <li class="active">
+                        <a [routerLink]="['']" id="register-btn">Register</a>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <app-content-loading>
+    <router-outlet>
 
-    </app-content-loading>
+    </router-outlet>
 
     <footer>
         <div class="container">
             <div class="row footer-upper-boundary text-center">
-                <a href="" class="col-lg-3 text-center">Home</a>
-                <a href="" class="col-lg-3 text-center">Users</a>
-                <a href="" class="col-lg-3 text-center">Products</a>
-                <a href="" class="col-lg-3 text-center">Contact us</a>
+                <a [routerLink]="['']" class="col-lg-3 text-center">Home</a>
+                <a [routerLink]="['']" class="col-lg-3 text-center">Users</a>
+                <a [routerLink]="['']" class="col-lg-3 text-center">Products</a>
+                <a [routerLink]="['']" class="col-lg-3 text-center">Contact us</a>
             </div>
+            <br>
             <div class="row footer-lower-boundary">
                 <div class="col-xs-12 text-center">
                     <a href="https://github.com/Team-Directive15">Telerik Academy 2016 Team Directive 15</a>
