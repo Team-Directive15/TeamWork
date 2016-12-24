@@ -1,1 +1,11 @@
-<h1>Course project of team Directive 15 will be awesome</h1>
+<h1>Information about all team members in this project</h1>
+<div class="panel panel-info" *ngFor="let author of authors | async">
+    <div class="panel-heading">
+        <h3 class="panel-title">Panel info for: {{author.fullname}}</h3>
+    </div>
+    <div class="panel-body">
+        <img [src]="author.image" alt="no image" width="100px">
+        <h3>Username: {{author.username}}</h3>
+        <a [href]="author.profile" class="row">Link to the profile in the Telerik Academy System</a>
+    </div>
+</div>
