@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user.model';
 
 @Component({
     selector: 'login',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class LoginComponent {
+    model: User;
+
+    ngOnInit() {
+        this.model = new User('', '', '');
+    }
+
     login() {
         console.log('login here');
     }
