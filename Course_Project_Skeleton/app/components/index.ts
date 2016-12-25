@@ -6,6 +6,7 @@ export { RegisterComponent } from './user.components/register.component';
 export { UserComponent } from './user.components/user.component';
 export { UsersComponent } from './user.components/users.component';
 export { ContactComponent } from './contact.component/contact.component';
+export { ProductsComponent } from './product.components/products.component';
 
 
 

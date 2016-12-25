@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
-import { AboutComponent, AppComponent, WelcomeComponent, LoginComponent, RegisterComponent, UserComponent, UsersComponent, ContactComponent } from './components'
+import { AboutComponent, AppComponent, WelcomeComponent, LoginComponent, RegisterComponent, UserComponent, UsersComponent, ContactComponent, ProductsComponent } from './components'
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './config/firebase-config';
@@ -25,7 +25,8 @@ import { firebaseConfig } from './config/firebase-config';
         LoginComponent,
         UserComponent,
         UsersComponent,
-        ContactComponent
+        ContactComponent,
+        ProductsComponent
     ],
     bootstrap: [AppComponent]
 })
