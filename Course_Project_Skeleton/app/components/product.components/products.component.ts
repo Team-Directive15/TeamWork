@@ -10,6 +10,6 @@ export class ProductsComponent implements OnInit{
     products: Product[];
 
     ngOnInit() {
-        this.products = [new Product('placeholder', 'placeholder'), new Product('placeholder2', 'placeholder2')];
+        this.products = [new Product('name', 'img', 5, 'BG', '1999', 1), new Product('name', 'img', 5, 'BG', '1999', 2)];
     }
 }
