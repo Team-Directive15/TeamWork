@@ -7,7 +7,7 @@
         <a [href]="author.profile">
             <img class="img-circle" [src]="author.image" alt="no image" width="100px">
         </a>
-        <h3>Username: {{author.username}}</h3>
+        <h3>Username: {{author.username | capitalize}}</h3>
         <a [href]="author.profile" class="row">Link to the profile in the Telerik Academy System</a>
     </div>
 </div>

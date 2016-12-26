@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
-import { 
-    AboutComponent, AppComponent, WelcomeComponent, LoginComponent, RegisterComponent, UserComponent, 
-    UsersComponent, ContactComponent, ProductsComponent, ProductComponent, ReviewComponent, RatingActiveComponent 
+import {
+    AboutComponent, AppComponent, WelcomeComponent, LoginComponent, RegisterComponent, UserComponent,
+    UsersComponent, ContactComponent, ProductsComponent, ProductComponent, ReviewComponent, RatingActiveComponent
 } from './components'
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './config/firebase-config';
+import { CapitalizePipe } from './pipes'
 //import {Ng2BootstrapModule} from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
@@ -32,7 +33,8 @@ import { firebaseConfig } from './config/firebase-config';
         ProductsComponent,
         ProductComponent,
         ReviewComponent,
-        RatingActiveComponent
+        RatingActiveComponent,
+        CapitalizePipe
     ],
     bootstrap: [AppComponent]
 })
