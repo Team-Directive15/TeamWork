@@ -9,6 +9,7 @@ export { ContactComponent } from './contact.component/contact.component';
 export { ProductsComponent } from './product.components/products.component';
 export { ProductComponent } from './product.components/product.component';
 export { ReviewComponent } from './review.component/review.component';
+export { RatingActiveComponent } from './review.component/ratingactive.component'
 
 
 

@@ -5,6 +5,10 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'review',
     templateUrl: './review.component.html',
+    styles: [
+        `textarea { resize: none;}`,
+        `.form-horizontal { padding: 10px;}`
+    ]
 })
 
 export class ReviewComponent {
@@ -20,6 +24,6 @@ export class ReviewComponent {
     }
 
     submit() {
-        
+
     }
 }
