@@ -10,7 +10,7 @@ import {
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './config/firebase-config';
-import { CapitalizePipe, ToUpperCase } from './pipes'
+import { CapitalizePipe, ToUpperCase, SortPipe } from './pipes'
 //import {Ng2BootstrapModule} from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
@@ -35,7 +35,8 @@ import { CapitalizePipe, ToUpperCase } from './pipes'
         ReviewComponent,
         RatingActiveComponent,
         CapitalizePipe,
-        ToUpperCase
+        ToUpperCase,
+        SortPipe
     ],
     bootstrap: [AppComponent]
 })
