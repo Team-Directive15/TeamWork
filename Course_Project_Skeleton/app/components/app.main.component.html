@@ -9,27 +9,25 @@
                 <img [src]="'../images/logo.jpg'" alt="no image" class="pull-right" width="80" height="50" />
                 <ul class="nav nav-pills" id="header-navigation">
                     <li class="active">
-                        <a [routerLink]="['']" id="home-btn">Home</a>
+                        <a [routerLink]="['']" id="home-btn" italic>Home</a>
                     </li>
                     <li class="active">
-                        <a [routerLink]="['products']" id="users-btn">Products</a>
-                    </li>
-                    <!--
-                    <li class="active">
-                        <a [routerLink]="['users']" id="users-btn">Users</a>
-                    </li>
-                    -->
-                    <li class="active">
-                        <a [routerLink]="['contact']" id="contact-btn">Contact us</a>
+                        <a [routerLink]="['products']" id="users-btn" italic>Products</a>
                     </li>
                     <li class="active">
-                        <a [routerLink]="['about']" id="about-btn">About</a>
+                        <a [routerLink]="['users']" id="users-btn" italic>Users</a>
                     </li>
                     <li class="active">
-                        <a [routerLink]="['login']" id="login-btn">Login</a>
+                        <a [routerLink]="['contact']" id="contact-btn" italic>Contact us</a>
                     </li>
                     <li class="active">
-                        <a [routerLink]="['register']" id="register-btn">Register</a>
+                        <a [routerLink]="['about']" id="about-btn" italic>About</a>
+                    </li>
+                    <li class="active">
+                        <a [routerLink]="['login']" id="login-btn" italic>Login</a>
+                    </li>
+                    <li class="active">
+                        <a [routerLink]="['register']" id="register-btn" italic>Register</a>
                     </li>
                 </ul>
             </div>
