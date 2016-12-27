@@ -1,17 +1,21 @@
 export class Product {
     name: string;
+    description: string;
     img: string;
-    rating: Number;
+    userrating: Number;
+    exprating: Number;
     country: string;
     year: string;
     id: Number;
 
-    constructor(name: string, img: string, rating: Number, country: string,  year: string, id: Number) {
+    constructor(name: string, img: string, userrating: Number, exprating: Number, country: string,  year: string, id: Number, description: string) {
         this.name = name;
         this.img = img;
-        this.rating = rating;
+        this.userrating = userrating;
+        this.exprating = exprating;
         this.country = country;
         this.year = year;
         this.id = id;
+        this.description = description;
     }
 };

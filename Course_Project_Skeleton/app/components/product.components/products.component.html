@@ -1,15 +1,16 @@
 <div class="container">
     <div *ngIf="products" class="row">
         <div class="col-sm-4 panel panel-default" *ngFor="let product of products">
-            <div class="col-sm-9">
+            <div class="col-sm-7">
                 <!-- <img class="product-image" [src]="product.img"> -->
                 <img class="img-responsive inline-block" src="http://whitespringswinery.com/wp-content/uploads/2016/07/red-white-wine-120111-shutterstock.jpg" alt="{{product.name}}">
             </div>
-            <div class="col-sm-3">
+            <div class="productinfo col-sm-5">
                 <div>
                     <a [routerLink]="['/product/', product.id]">{{product.name}}</a>
                 </div>
-                <div>rating: {{product.rating}}</div>
+                <div>user rating: {{product.userrating}}</div>
+                <div>expert rating: {{product.exprating}}</div>
                 <div>country: {{product.country}}</div>
                 <div>year: {{product.year}}</div>
             </div>

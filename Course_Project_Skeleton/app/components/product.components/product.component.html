@@ -1,15 +1,35 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 panel panel-default">
-            <div class="col-sm-9">
-                <!-- <img class="product-image" [src]="product.img"> -->
+        <div class="col-sm-12 panel panel-default productinfo">
+            <div class="col-sm-4">
+                <!-- <img class="product-image" [src]="product.img" alt="{{product.name}}> -->
                 <img class="img-responsive inline-block" src="http://whitespringswinery.com/wp-content/uploads/2016/07/red-white-wine-120111-shutterstock.jpg" alt="{{product.name}}">
             </div>
-            <div class="col-sm-3">
+            <div class="jumbotron marketing col-sm-4">
                 <h2>{{product.name}}</h2>
-                <div>rating: {{product.rating}}</div>
-                <div>country: {{product.country}}</div>
-                <div>year: {{product.year}}</div>
+                <p>description: {{product.description}}</p>
+                <p>country: {{product.country}}</p>
+                <p>year: {{product.year}}</p>
+            </div>
+            <div class="rating-panel marketing col-sm-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4>User rating</h4>
+                    </div>
+                    <div class="starpanel panel-body">
+                        <i class="glyphicon glyphicon-star" id="rating-star"></i>
+                        <p class="rating">{{product.userrating}}</p>
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4>Expert rating</h4>
+                    </div>
+                    <div class="starpanel panel-body">
+                        <i class="glyphicon glyphicon-star" id="rating-star"></i>
+                        <p class="rating">{{product.exprating}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

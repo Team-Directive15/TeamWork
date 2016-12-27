@@ -4,7 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'productdetails',
-    templateUrl: './product.component.html'
+    templateUrl: './product.component.html',
+    styleUrls: ['./product.component.css']
 })
 
 export class ProductComponent implements OnInit {
@@ -16,6 +17,6 @@ export class ProductComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.product = new Product('name', 'img', 5, 'BG', '1999', (<any>this._route.params)._value.id);
+        this.product = new Product('name', 'img', 5.1, 3.3, 'BG', '1999', (<any>this._route.params)._value.id, 'some random red wine');
     }
 }
