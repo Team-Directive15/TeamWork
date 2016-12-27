@@ -28,3 +28,9 @@
 .panel {
     margin: 3px;
 }
+
+.review-heading {
+    font-size: 20px;
+    font-weight: 200;
+    margin-right: 40%;
+}
