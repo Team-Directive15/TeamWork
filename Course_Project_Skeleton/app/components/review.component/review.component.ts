@@ -6,8 +6,8 @@ import { ActivatedRoute } from '@angular/router';
     selector: 'review',
     templateUrl: './review.component.html',
     styles: [
-        `textarea { resize: none;}`,
-        `.form-horizontal { padding: 10px;}`
+        `textarea { resize: none;},
+        .form-horizontal { padding: 10px;}`
     ]
 })
 
