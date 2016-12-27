@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../models/product.model';
 import { ActivatedRoute } from '@angular/router';
+import { Product } from '../../models/product.model';
+import { Review } from '../../models/review.model';
 
 @Component({
     selector: 'productdetails',
@@ -17,6 +18,8 @@ export class ProductComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.product = new Product('name', 'img', 5.1, 3.3, 'BG', '1999', (<any>this._route.params)._value.id, 'some random red wine');
+        this.product = new Product('name', 'img', 5.1, 3.3, 'BG', '1999', (<any>this._route.params)._value.id, 'some random red wine',
+         [new Review('aa', 2, 3, 'aaa'), new Review('a3refa', 2, 3, 'aaaaaaaada'), new Review('usr', 2, 3, 'another review')]);
+         console.log(this.product.reviews);
     }
 }
