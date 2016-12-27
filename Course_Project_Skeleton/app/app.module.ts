@@ -11,7 +11,7 @@ import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './config/firebase-config';
 import { CapitalizePipe, ToUpperCasePipe, SortPipe } from './pipes';
-import { HoverDirective } from './directives';
+import { HoverDirective, UnderlineDirective } from './directives';
 //import {Ng2BootstrapModule} from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
@@ -38,7 +38,8 @@ import { HoverDirective } from './directives';
         CapitalizePipe,
         ToUpperCasePipe,
         SortPipe,
-        HoverDirective
+        HoverDirective,
+        UnderlineDirective
     ],
     bootstrap: [AppComponent]
 })
