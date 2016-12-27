@@ -1,0 +1,25 @@
+.productinfo {
+    padding-top: 20px;
+}
+
+.starpanel {
+    position: relative;
+}
+
+#rating-star {
+    color: gold;
+    font-size: 80px;
+}
+
+.rating {
+    position: absolute;
+    left: 40%;
+    top: 37%;
+    font-size: 20px;
+    font-weight: 200;
+    z-index: 3;
+}
+
+.rating-panel {
+    text-align: center;
+}
