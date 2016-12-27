@@ -10,7 +10,8 @@ import {
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './config/firebase-config';
-import { CapitalizePipe, ToUpperCase, SortPipe } from './pipes'
+import { CapitalizePipe, ToUpperCasePipe, SortPipe } from './pipes';
+import { HoverDirective } from './directives';
 //import {Ng2BootstrapModule} from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
@@ -35,8 +36,9 @@ import { CapitalizePipe, ToUpperCase, SortPipe } from './pipes'
         ReviewComponent,
         RatingActiveComponent,
         CapitalizePipe,
-        ToUpperCase,
-        SortPipe
+        ToUpperCasePipe,
+        SortPipe,
+        HoverDirective
     ],
     bootstrap: [AppComponent]
 })

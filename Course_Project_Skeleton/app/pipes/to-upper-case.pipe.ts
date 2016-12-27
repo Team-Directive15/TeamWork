@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
     name: 'to-upper-case'
 })
 
-export class ToUpperCase implements PipeTransform {
+export class ToUpperCasePipe implements PipeTransform {
     transform(value: string): string {
         return value.toUpperCase.toString();
     }
