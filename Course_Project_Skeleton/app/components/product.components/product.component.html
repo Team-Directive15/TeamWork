@@ -41,6 +41,7 @@
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h4>from:
+                            <i *ngIf="review.expert" class="glyphicon glyphicon-ok-sign" alt="expert"></i>
                             <a [routerLink]="['/user/', review.authorId]">{{review.authorName}}</a>
                         </h4>
                     </div>

@@ -12,7 +12,7 @@ export class ProductsComponent implements OnInit{
     products: Product[];
 
     ngOnInit() {
-        this.products = [new Product('name', 'img', 5.1, 4.0, 'BG', '1999', 1,  'some random red wine', [new Review('aa', 2, 3, 'aaa')])
-        , new Product('name', 'img', 2, 3, 'BG', '1999', 2,  'some random red wine', [new Review('aa', 2, 3, 'aaa')])];
+        this.products = [new Product('name', 'img', 5.1, 4.0, 'BG', '1999', 1,  'some random red wine', [new Review('aa', 2, 3, 'aaa', false)])
+        , new Product('name', 'img', 2, 3, 'BG', '1999', 2,  'some random red wine', [new Review('aa', 2, 3, 'aaa', true)])];
     }
 }
