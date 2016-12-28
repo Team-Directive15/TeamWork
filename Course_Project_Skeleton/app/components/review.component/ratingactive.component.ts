@@ -2,7 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'rating-active',
-    templateUrl: './ratingactive.component.html'
+    templateUrl: './ratingactive.component.html',
+    styles: [
+        `i {
+                cursor: pointer;
+            }
+        `
+    ]
 })
 
 export class RatingActiveComponent {
