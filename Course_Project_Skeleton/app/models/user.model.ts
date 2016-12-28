@@ -1,11 +1,11 @@
 export class User {
     username: string;
     password: string;
-    role: string;
+    expert: boolean;
 
-    constructor(username: string, password: string, role: string) {
+    constructor(username: string, password: string, expert: boolean) {
         this.username = username;
         this.password = password;
-        this.role = role;
+        this.expert = expert;
     }
 };

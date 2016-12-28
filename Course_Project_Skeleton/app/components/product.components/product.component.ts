@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
 
     ngOnInit() {
         this.product = new Product('name', 'img', 5.1, 3.3, 'BG', '1999', (<any>this._route.params)._value.id, 'some random red wine',
-         [new Review('aa', 2, 3, 'aaa'), new Review('a3refa', 2, 3, 'aaaaaaaada'), new Review('usr', 2, 3, 'another review')]);
+         [new Review('aa', 2, 3, 'aaa', false), new Review('a3refa', 2, 3, 'aaaaaaaada', true), new Review('usr', 2, 3, 'another review', false)]);
          console.log(this.product.reviews);
     }
 }
