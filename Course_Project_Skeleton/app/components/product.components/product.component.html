@@ -1,8 +1,7 @@
 <div class="container">
     <div class="row panel panel-default productinfo">
         <div class="col-sm-4">
-            <!-- <img class="product-image" [src]="product.img" alt="{{product.name}}> -->
-            <img class="img-responsive inline-block" src="http://whitespringswinery.com/wp-content/uploads/2016/07/red-white-wine-120111-shutterstock.jpg" alt="{{product.name}}">
+            <img class="img-responsive inline-block" [src]="product.img" alt="{{product.name}}">
         </div>
         <div class="jumbotron marketing col-sm-4">
             <h2>{{product.name}}</h2>
@@ -51,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="jumbotron panel-body col-sm-8">
+            <div class="review-text jumbotron panel-body col-sm-9">
                 <p>{{review.text}}</p>
             </div>
         </div>

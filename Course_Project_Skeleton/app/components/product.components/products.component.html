@@ -2,8 +2,7 @@
     <div *ngIf="products" class="row">
         <div class="col-sm-4 panel panel-default" *ngFor="let product of products">
             <div class="col-sm-7">
-                <!-- <img class="product-image" [src]="product.img"> -->
-                <img class="img-responsive inline-block" src="http://whitespringswinery.com/wp-content/uploads/2016/07/red-white-wine-120111-shutterstock.jpg" alt="{{product.name}}">
+                <img class="img-product img-responsive" [src]="product.img" alt="{{product.name}}">
             </div>
             <div class="productinfosmall col-sm-5">
                 <div>
