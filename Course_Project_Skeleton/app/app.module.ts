@@ -5,8 +5,11 @@ import { FormsModule } from '@angular/forms';
 
 import {
     AboutComponent, AppComponent, WelcomeComponent, LoginComponent, RegisterComponent, UserComponent,
-    UsersComponent, ContactComponent, ProductsComponent, ProductComponent, ReviewComponent, RatingActiveComponent
-} from './components'
+    UsersComponent, ContactComponent, ProductsComponent, ProductComponent, NewProductComponent, ReviewComponent, RatingActiveComponent
+} from './components';
+
+import {CountriesService} from './services';
+
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './config/firebase-config';
@@ -22,6 +25,9 @@ import { HoverDirective, UnderlineDirective, ItalicDirective } from './directive
         routes,
         AngularFireModule.initializeApp(firebaseConfig)
     ],
+    providers: [
+        CountriesService
+    ],
     declarations: [
         AppComponent,
         WelcomeComponent,
@@ -33,6 +39,7 @@ import { HoverDirective, UnderlineDirective, ItalicDirective } from './directive
         ContactComponent,
         ProductsComponent,
         ProductComponent,
+        NewProductComponent,
         ReviewComponent,
         RatingActiveComponent,
         CapitalizePipe,

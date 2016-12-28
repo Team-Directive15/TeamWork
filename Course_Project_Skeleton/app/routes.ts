@@ -1,6 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-import { WelcomeComponent, AboutComponent, LoginComponent, RegisterComponent, UserComponent, UsersComponent, ContactComponent, ProductsComponent,  ProductComponent, ReviewComponent} from './components'
+import { WelcomeComponent, AboutComponent, LoginComponent, RegisterComponent, UserComponent, UsersComponent, ContactComponent, ProductsComponent,  ProductComponent, NewProductComponent, ReviewComponent} from './components'
 
 export const routes: ModuleWithProviders
     = RouterModule.forRoot([
@@ -23,6 +23,10 @@ export const routes: ModuleWithProviders
         {
             path: 'products',
             component: ProductsComponent
+        },
+        {
+            path: 'product/new',
+            component: NewProductComponent
         },
         {
             path: 'product/:id',
