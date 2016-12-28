@@ -8,8 +8,10 @@ export { UsersComponent } from './user.components/users.component';
 export { ContactComponent } from './contact.component/contact.component';
 export { ProductsComponent } from './product.components/products.component';
 export { ProductComponent } from './product.components/product.component';
+export { NewProductComponent } from './product.components/newproduct.component';
 export { ReviewComponent } from './review.component/review.component';
-export { RatingActiveComponent } from './review.component/ratingactive.component'
+export { RatingActiveComponent } from './review.component/ratingactive.component';
+
 
 
 

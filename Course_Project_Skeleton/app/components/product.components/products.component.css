@@ -11,3 +11,8 @@
     max-height: 135px;
     vertical-align: middle;
 }
+
+.product-panel {
+    border: 1px solid lightgray;
+    border-radius: 20px;
+}
