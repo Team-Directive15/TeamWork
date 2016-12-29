@@ -17,7 +17,7 @@ export const routes: ModuleWithProviders
             component: LoginComponent
         },
         {
-            path: 'user',
+            path: 'users/:id',
             component: UserComponent
         },
         {
