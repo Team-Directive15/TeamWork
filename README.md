@@ -12,15 +12,15 @@ Course project of team Directive15
 
 ##  Project concept
 
-Wine review website
+Liquor reviews Single Page Angular2 Application
 
 -   Visitors
-    -   can view products and reviews, but not submit either
+    - can view products and reviews, but not submit either
 -   Users
-    -   can register as "experts"
-    -   can add new products
-    -   can review products
+    - can register as "experts"
+    - can add new products
+    - can review products
 -   Products
-    -   have a description and several basic statistics
-    -   have two agregate scores calculated from basic user and expert reviews
-    -   have a list of reviews
+    - have a description and several basic statistics
+    - have two agregate scores calculated from basic user and expert reviews
+    - have a list of reviews
