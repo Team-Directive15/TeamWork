@@ -3,12 +3,12 @@
         <div class="navbar navbar-default container-fluid">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a class="btn btn-primary" [routerLink]="['/product/new']" hover>Submit Product</a>
+                    <a *ngIf="1 == 1" class="btn btn-primary" [routerLink]="['/product/new']" hover>Submit Product</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="navbar-brand" href="#">Sort By:</a>
+                    <span class="navbar-brand" href="#">Sort By:</span>
                 </li>
                 <li>
                     <a href="#">Expert Rating</a>

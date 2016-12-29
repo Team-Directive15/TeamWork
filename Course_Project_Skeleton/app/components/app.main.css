@@ -26,3 +26,7 @@ footer {
     background-color: #efefef;
     text-align: center;
 }
+
+.lgt-btn {
+    cursor: pointer;
+}

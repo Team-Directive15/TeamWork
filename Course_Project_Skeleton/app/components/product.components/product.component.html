@@ -33,7 +33,7 @@
     <div class="row panel panel-default">
         <div class="panel-heading text-right">
             <span class="review-heading">Reviews</span>
-            <a [routerLink]="['/review/', product.id]" class="btn btn-primary">Submit Review</a>
+            <a *ngIf="1 == 1" [routerLink]="['/review/', product.id]" class="btn btn-primary">Submit Review</a>
         </div>
         <div class="row panel panel-info productinfo" *ngFor="let review of product.reviews">
             <div class="col-sm-2 rating-panel">
