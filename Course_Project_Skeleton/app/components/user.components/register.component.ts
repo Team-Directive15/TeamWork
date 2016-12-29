@@ -11,7 +11,7 @@ export class RegisterComponent {
     model: User;
 
     ngOnInit() {
-        this.model = new User('', '', false);
+        this.model = new User('', '', false, []);
     }
     register() {
         console.log('register here');

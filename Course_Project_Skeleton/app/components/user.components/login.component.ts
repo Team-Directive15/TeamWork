@@ -10,7 +10,7 @@ export class LoginComponent {
     model: User;
 
     ngOnInit() {
-        this.model = new User('', '', false);
+        this.model = new User('', '', false, []);
     }
 
     login() {
