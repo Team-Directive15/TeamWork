@@ -18,7 +18,7 @@ Wine review website
     -   can view products and reviews, but not submit either
 -   Users
     -   can register as "experts"
-    -   can subit products
+    -   can add new products
     -   can review products
 -   Products
     -   have a description and several basic statistics
