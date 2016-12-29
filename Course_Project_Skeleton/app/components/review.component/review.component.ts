@@ -20,7 +20,7 @@ export class ReviewComponent {
     }
 
     ngOnInit() {
-        this.model = new Review('', 0, 0, '', false);
+        this.model = new Review('', 0, 0, '', false, '', 0);
     }
 
     submit() {

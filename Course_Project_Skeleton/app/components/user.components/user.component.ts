@@ -17,6 +17,6 @@ export class UserComponent {
     }
 
     ngOnInit() {
-        this.user = new User('ExmplUsr', 'aaa', false, [new Review('aa', 2, 3, 'aaa', true)]);
+        this.user = new User('ExmplUsr', 'aaa', false, [new Review('aa', 2, 3, 'aaa', true, 'prd', 2)]);
     }
 }

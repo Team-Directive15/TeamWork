@@ -13,6 +13,7 @@
                 </div>
             </div>
             <div class="review-text jumbotron panel-body col-sm-9">
+                <p>For product: <a [routerLink]="['/product/', review.productId]">{{review.productName}}</a></p>
                 <p>{{review.text}}</p>
             </div>
         </div>

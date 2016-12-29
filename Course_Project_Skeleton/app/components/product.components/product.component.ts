@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
 
     ngOnInit() {
         this.product = new Product('name', 'http://cdn-jpg.thedailymeal.net/sites/default/files/styles/tdmr_a5/public/story/2016/wine%20story.jpg', 5.1, 3.3, 'BG', '1999', 'some random red wine',
-         [new Review('aa', 2, 3, 'aaa', false), new Review('a3refa', 2, 3, 'aaaaaaaada', true), new Review('usr', 2, 3, 'another review', false)]);
+         [new Review('aa', 2, 3, 'aaa', false, 'prd', 2), new Review('a3refa', 2, 3, 'aaaaaaaada', true, 'prd', 2), new Review('usr', 2, 3, 'another review', false, 'prd', 2)]);
          console.log(this.product.reviews);
     }
 }
