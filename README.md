@@ -17,8 +17,8 @@ Liquor reviews Single Page Angular2 Application
 -   Visitors
     - can view products and reviews, but not submit either
 -   Users
-    - can register as "experts"
-    - can add new products
+    - can register az "experts"
+    - can add new products
     - can review products
 -   Products
     - have a description and several basic statistics
