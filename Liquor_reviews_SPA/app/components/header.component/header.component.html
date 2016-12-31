@@ -28,7 +28,7 @@
                 <a [routerLink]="['register']" id="register-btn" italic>Register</a>
             </li>
             <li *ngIf="1 == 1" class="active">
-                <a class="lgt-btn" (click)="Logout()" italic>Logout</a>
+                <a [routerLink]="['']" id="logout-btn" (click)="Logout()" italic>Logout</a>
             </li>
         </ul>
     </div>
