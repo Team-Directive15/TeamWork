@@ -23,7 +23,7 @@ export class LoginComponent {
         this.authenticationServise.login(user)
             .then(() => {
                 localStorage.setItem('loggedUser', JSON.stringify({ email: this.model.email, password: this.model.password }));
-                this.router.navigate(['']);
+                setTimeout(() => this.router.navigate(['']), 2000);
             })
             .catch((error) => {
                 this.error = error.message
