@@ -11,6 +11,11 @@ export class AuthenticationService {
 
     register(user: User) {
         return firebase.auth()
-                .createUserWithEmailAndPassword(user.username, user.password);
+            .createUserWithEmailAndPassword(user.email, user.password);
+    }
+
+    login(user: User) {
+        return firebase.auth()
+            .signInWithEmailAndPassword(user.email, user.password);
     }
 }

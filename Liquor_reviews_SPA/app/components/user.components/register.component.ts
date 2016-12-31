@@ -20,10 +20,10 @@ export class RegisterComponent {
     }
 
     register() {
-        let user = new User(this.model.username, this.model.password)
+        let user = new User(this.model.email, this.model.password)
         this.authenticationService.register(user)
             .then(() => {
-                this.router.navigate(['']);
+                this.router.navigate(['login']);
             })
             .catch((error) => {
                 this.error = error.message;
