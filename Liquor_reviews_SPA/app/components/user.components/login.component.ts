@@ -22,6 +22,7 @@ export class LoginComponent {
         let user = new User(this.model.email, this.model.password);
         this.authenticationServise.login(user)
             .then(() => {
+                localStorage.setItem('loggedUser', JSON.stringify({ email: this.model.email, password: this.model.password }));
                 this.router.navigate(['']);
             })
             .catch((error) => {

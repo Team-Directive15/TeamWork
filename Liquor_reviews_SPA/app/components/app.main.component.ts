@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
     selector: 'course-app',
@@ -9,7 +11,16 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 export class AppComponent {
 
+    constructor(private router: Router, private authenticationService: AuthenticationService) { }
+
     Logout() {
-        console.log('auth.logout');
+        this.authenticationService.logout()
+            .then(() => {
+                localStorage.removeItem('loggedUser');
+                this.router.navigate(['']);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }
 }

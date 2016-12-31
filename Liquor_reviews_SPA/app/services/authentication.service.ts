@@ -18,4 +18,9 @@ export class AuthenticationService {
         return firebase.auth()
             .signInWithEmailAndPassword(user.email, user.password);
     }
+
+    logout() {
+        return firebase.auth()
+                       .signOut();
+    }
 }
