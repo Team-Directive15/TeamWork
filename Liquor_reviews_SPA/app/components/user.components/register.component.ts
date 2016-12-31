@@ -11,7 +11,8 @@ import { AuthenticationService } from '../../services/authentication.service';
 
 export class RegisterComponent {
     model: User;
-    
+    error: string = "";
+
     constructor(private router: Router, private authenticationService: AuthenticationService) { }
 
     ngOnInit() {
@@ -25,7 +26,7 @@ export class RegisterComponent {
                 this.router.navigate(['']);
             })
             .catch((error) => {
-                console.log(error);
+                this.error = error.message;
             });
     }
 }
