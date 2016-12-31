@@ -9,15 +9,6 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 export class AppComponent {
 
-    items:FirebaseListObservable<any[]>;
-
-    constructor(af: AngularFire) {
-        this.items = af.database.list('authors');
-        this.items.forEach(element => {
-            console.log(element)
-        });
-    }
-
     Logout() {
         console.log('auth.logout');
     }

@@ -8,7 +8,7 @@ import {
     UsersComponent, ContactComponent, ProductsComponent, ProductComponent, NewProductComponent, ReviewComponent, RatingActiveComponent
 } from './components';
 
-import {CountriesService} from './services';
+import { CountriesService, AuthenticationService } from './services';
 
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
@@ -26,7 +26,8 @@ import { HoverDirective, UnderlineDirective, ItalicDirective } from './directive
         AngularFireModule.initializeApp(firebaseConfig)
     ],
     providers: [
-        CountriesService
+        CountriesService,
+        AuthenticationService
     ],
     declarations: [
         AppComponent,
