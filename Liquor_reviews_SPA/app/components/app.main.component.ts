@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
 
