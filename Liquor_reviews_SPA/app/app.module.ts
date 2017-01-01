@@ -4,11 +4,12 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 import {
-    AboutComponent, AppComponent, WelcomeComponent, LoginComponent, RegisterComponent, UserComponent,
-    UsersComponent, ContactComponent, ProductsComponent, ProductComponent, NewProductComponent, ReviewComponent, RatingActiveComponent
+    AboutComponent, AppComponent, WelcomeComponent, LoginComponent, RegisterComponent, UserComponent, UsersComponent,
+    ContactComponent, ProductsComponent, ProductComponent, NewProductComponent, ReviewComponent, RatingActiveComponent,
+    HeaderComponent, FooterComponent
 } from './components';
 
-import {CountriesService} from './services';
+import { CountriesService, AuthenticationService } from './services';
 
 import { routes } from './routes';
 import { AngularFireModule } from 'angularfire2';
@@ -26,7 +27,8 @@ import { HoverDirective, UnderlineDirective, ItalicDirective } from './directive
         AngularFireModule.initializeApp(firebaseConfig)
     ],
     providers: [
-        CountriesService
+        CountriesService,
+        AuthenticationService
     ],
     declarations: [
         AppComponent,
@@ -42,6 +44,8 @@ import { HoverDirective, UnderlineDirective, ItalicDirective } from './directive
         NewProductComponent,
         ReviewComponent,
         RatingActiveComponent,
+        HeaderComponent,
+        FooterComponent,
         CapitalizePipe,
         ToUpperCasePipe,
         SortPipe,

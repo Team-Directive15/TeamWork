@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 
 @Component({
     selector: 'app-content-loading',
-    templateUrl: './app.welcome.component.html',
+    templateUrl: './welcome.component.html',
     styles:[`
     p {
         width: 380px;
