@@ -6,7 +6,8 @@ import { Review } from '../../models/review.model';
 
 @Component({
     selector: 'users',
-    templateUrl: './users.component.html'
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.css']
 })
 
 export class UsersComponent { 
