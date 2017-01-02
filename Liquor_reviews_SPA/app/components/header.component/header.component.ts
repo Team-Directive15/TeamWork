@@ -4,7 +4,13 @@ import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
     selector: 'header',
-    templateUrl: './header.component.html'
+    templateUrl: './header.component.html',
+    styles: [`
+    .page-title {
+        border-radius: 15px;
+        padding-left: 15px;  
+    }
+    `]
 })
 
 export class HeaderComponent {

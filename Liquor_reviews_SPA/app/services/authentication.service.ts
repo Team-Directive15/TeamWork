@@ -5,9 +5,7 @@ import { User } from '../models/user.model';
 @Injectable()
 
 export class AuthenticationService {
-    constructor(private firebase: AngularFire) {
-
-    }
+    constructor(private firebase: AngularFire) { }
 
     register(user: User) {
         return firebase.auth()
@@ -21,6 +19,6 @@ export class AuthenticationService {
 
     logout() {
         return firebase.auth()
-                       .signOut();
+            .signOut();
     }
 }

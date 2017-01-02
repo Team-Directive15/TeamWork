@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { FirebaseListObservable } from 'angularfire2';
+import { AboutService } from '../../services';
 
 @Component({
     selector: 'about',
     templateUrl: './about.component.html',
+    providers: [AboutService],
     styles: [
         `h3 {
                 display: inline-block;
@@ -14,7 +16,10 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 export class AboutComponent {
     authors: FirebaseListObservable<any[]>;
-    constructor(af: AngularFire) {
-        this.authors = af.database.list('authors');
+
+    constructor(private aboutService: AboutService) { }
+
+    ngOnInit() {
+        this.authors = this.aboutService.getAllAuthors();
     }
 }
