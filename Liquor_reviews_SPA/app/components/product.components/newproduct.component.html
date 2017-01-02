@@ -7,22 +7,25 @@
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" #loginForm="ngForm" (ngSubmit)="submit();">
+                        <div [hidden]="name.valid || name.untouched" class="error-msg">ProductName {{nameTitle}}</div>
+                        <div [hidden]="description.valid || description.untouched" class="error-msg">Description {{descrTitle}}</div>
+                        <div [hidden]="img.valid || img.untouched" class="error-msg">Image link {{imgTitle}}</div>
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" placeholder="Name" required>
+                                <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" #name="ngModel" placeholder="Name" [pattern]="namePattern" [title]="nameTitle" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="description" class="col-sm-2 control-label">Description</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="name" [(ngModel)]="model.description" name="description" placeholder="Description" required>
+                                <input type="text" class="form-control" id="descr" [(ngModel)]="model.description" name="description" #description="ngModel" placeholder="Description" [pattern]="descrPattern" [title]="descrTitle" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="img" class="col-sm-2 control-label">Image Link</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="img" [(ngModel)]="model.img" name="img" placeholder="Image" required>
+                                <input type="text" class="form-control" id="img" [(ngModel)]="model.img" name="img" #img="ngModel" placeholder="Image" [pattern]="imgPattern" [title]="imgTitle" required>
                             </div>
                         </div>
                         <div class="form-group">
