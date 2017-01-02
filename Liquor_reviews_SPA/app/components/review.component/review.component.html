@@ -7,11 +7,12 @@
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" #reviewForm="ngForm" (ngSubmit)="submit();">
+                        <div [hidden]="text.valid || text.untouched" class="error-msg">Review text {{textTitle}}</div>
                         <div class="form-group">
-                            <rating-active></rating-active>
+                            <rating-active #ratingcontrol (click)="rate(ratingcontrol.value);"></rating-active>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="7" [(ngModel)]="model.text" name="text">Enter text here...</textarea>
+                            <textarea class="form-control" rows="7" [(ngModel)]="model.text" #text="ngModel" name="text" [pattern]="textPattern" [title]="textTitle" required>Enter text here...</textarea>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary" id="btn-submit">Publish Review</button>

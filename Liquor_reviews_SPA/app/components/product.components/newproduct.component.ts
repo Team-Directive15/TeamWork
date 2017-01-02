@@ -19,8 +19,8 @@ export class NewProductComponent implements OnInit {
     public years: string[];
     public namePattern: string = "^[^<>?,\$]{6,20}";
     public nameTitle: string = "must be between 5 and 15 characters long";
-    public descrPattern: string = "^[^<>?,\$]{10,200}";
-    public descrTitle: string = "must be between 10 and 200 characters long";
+    public descrPattern: string = "^[^<>?,\$]{10,30}";
+    public descrTitle: string = "must be between 10 and 30 characters long";
     public imgPattern: string = "(https?:\/\/.*\.(?:png|jpg|jpeg))";
     public imgTitle: string = "must be a valid link to an image";
     private _countriesService: CountriesService;

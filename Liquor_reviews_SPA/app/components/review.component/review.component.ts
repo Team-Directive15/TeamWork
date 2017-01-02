@@ -13,6 +13,8 @@ import { ActivatedRoute } from '@angular/router';
 
 export class ReviewComponent {
     public model: Review;
+    public textPattern: string = "^[^<>?,\$]{10,200}";
+    public textTitle: string = "must be between 10 and 200 characters long";
     private _route: ActivatedRoute;
 
     constructor(route: ActivatedRoute) {
@@ -25,5 +27,9 @@ export class ReviewComponent {
 
     submit() {
 
+    }
+
+    rate(rating: Number) {
+        this.model.rating = rating;
     }
 }
