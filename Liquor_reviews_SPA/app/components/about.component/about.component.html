@@ -1,5 +1,5 @@
 <h1>Information about all team members in this project</h1>
-<div class="panel panel-info" *ngFor="let author of (authors | async | sort: 'username')">
+<div class="panel panel-info" *ngFor="let author of (authors | async)">
     <div class="panel-heading">
         <h3 class="panel-title">Panel info for: {{author.fullname}}</h3>
     </div>
