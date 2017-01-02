@@ -4,10 +4,9 @@ import { AngularFire } from 'angularfire2';
 @Injectable()
 
 export class AboutService {
-    constructor(private af: AngularFire){
 
-    }
-    
+    constructor(private af: AngularFire) { }
+
     getAllAuthors() {
         return this.af.database.list('authors');
     }
