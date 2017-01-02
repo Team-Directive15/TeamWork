@@ -28,7 +28,7 @@
                 <a [routerLink]="['register']" id="register-btn" italic>Register</a>
             </li>
             <li *ngIf="user" class="active">
-                <a [routerLink]="['']" id="user-profile" italic>{{email}}</a>
+                <a [routerLink]="['profile']" id="user-profile" italic>{{email}}</a>
             </li>
             <li *ngIf="user" class="active">
                 <a id="logout-btn" (click)="Logout()" italic>Logout</a>

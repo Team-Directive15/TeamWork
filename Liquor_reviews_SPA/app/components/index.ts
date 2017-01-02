@@ -13,4 +13,5 @@ export { ReviewComponent } from './review.component/review.component';
 export { RatingActiveComponent } from './review.component/ratingactive.component';
 export { HeaderComponent } from './header.component/header.component';
 export { FooterComponent } from './footer.component/footer.component';
+export { ProfileComponent } from './user.components/profile.component/profile.component';
 
