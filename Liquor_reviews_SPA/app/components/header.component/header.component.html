@@ -21,21 +21,18 @@
             <li class="active">
                 <a [routerLink]="['about']" id="about-btn" italic>About</a>
             </li>
-            <li *ngIf="!user" class="active">
+            <li class="active">
                 <a [routerLink]="['login']" id="login-btn" italic>Login</a>
             </li>
-            <li *ngIf="!user" class="active">
+            <li class="active">
                 <a [routerLink]="['register']" id="register-btn" italic>Register</a>
             </li>
             <li *ngIf="user" class="active">
                 <a [routerLink]="['']" id="user-profile" italic>{{email}}</a>
             </li>
             <li *ngIf="user" class="active">
-                <a [routerLink]="['']" id="logout-btn" (click)="Logout()" italic>Logout</a>
+                <a id="logout-btn" (click)="Logout()" italic>Logout</a>
             </li>
-            <!--<li [style.display]="user? 'none' : 'inherit'"><a class="login" [routerLink]="['/login']" id="nav-login">Login</a></li>
-            <li *ngIf="user"><a [routerLink]="['/profile']" [routerLinkActive]="['active']" id="nav-profile">{{username}}</a></li>
-            <li [style.display]="user? 'inherit' : 'none'"><a class="logout" [routerLink]="['/logout']" [routerLinkActive]="['active']" id="nav-logout">Logout</a></li>-->
         </ul>
     </div>
 </div>
