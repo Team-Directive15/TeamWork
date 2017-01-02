@@ -10,8 +10,12 @@ import { AuthenticationService } from '../../services/authentication.service';
 })
 
 export class RegisterComponent {
-    model: User;
-    error: string = "";
+    public model: User;
+    public error: string = "";
+    public passwordPattern: string = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}";
+    public passwordTitle: string = "must contain at least one number and one uppercase and lowercase letter, and between 6 and 20 characters long";
+    public emailPattern: string = "^[^<>?,\$]{6,20}";
+    public emailTitle: string = "must be between 5 and 15 characters long";
 
     constructor(private router: Router, private authenticationService: AuthenticationService) { }
 
