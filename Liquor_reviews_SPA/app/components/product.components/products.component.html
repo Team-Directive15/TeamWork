@@ -20,13 +20,13 @@
         </div>
     </div>
     <div *ngIf="products" class="row">
-        <div class="col-sm-4 product-panel" *ngFor="let product of products">
+        <div class="col-sm-4 product-panel" *ngFor="let product of (products | async)">
             <div class="col-sm-7">
                 <img class="img-product img-responsive" [src]="product.img" alt="{{product.name}}">
             </div>
             <div class="productinfosmall col-sm-5">
                 <div>
-                    <a [routerLink]="['/product/', product.id]">{{product.name}}</a>
+                    <a [routerLink]="['/product/', product.id]">name: {{product.name}}</a>
                 </div>
                 <div>user rating: {{product.userrating}}</div>
                 <div>expert rating: {{product.exprating}}</div>
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="!products.length">
+    <div *ngIf="!products">
         No products yet
     </div>
 </div>

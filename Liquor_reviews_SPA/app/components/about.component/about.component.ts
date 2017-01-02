@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2';
-import { AboutService } from '../../services'
+import { AboutService } from '../../services';
+
 @Component({
     selector: 'about',
     templateUrl: './about.component.html',
@@ -15,7 +16,10 @@ import { AboutService } from '../../services'
 
 export class AboutComponent {
     authors: FirebaseListObservable<any[]>;
-    constructor(private aboutService: AboutService) {
+
+    constructor(private aboutService: AboutService) { }
+
+    ngOnInit() {
         this.authors = this.aboutService.getAllAuthors();
     }
 }
