@@ -16,6 +16,13 @@ import { AuthenticationService } from '../../services/authentication.service';
         width: auto\9;    
         width: 600px;
     }
+    a.regnow {
+        margin-left: 150px;
+        margin-top: 20px;
+        margin-bottom: 20px;    
+        max-width: 100%;
+        width: auto\9;    
+    }
     `]
 })
 
