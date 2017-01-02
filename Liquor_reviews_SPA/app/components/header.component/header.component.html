@@ -22,16 +22,16 @@
                 <a [routerLink]="['about']" id="about-btn" italic>About</a>
             </li>
             <li class="active">
-                <a [routerLink]="['login']" id="login-btn" italic>Login</a>
+                <a *ngIf="!user" [routerLink]="['login']" id="login-btn" italic>Login</a>
             </li>
             <li class="active">
-                <a [routerLink]="['register']" id="register-btn" italic>Register</a>
+                <a *ngIf="!user" [routerLink]="['register']" id="register-btn" italic>Register</a>
             </li>
             <li *ngIf="user" class="active">
-                <a [routerLink]="['profile']" id="user-profile" italic>{{email}}</a>
+                <a [routerLink]="['profile']" id="user-profile" italic>{{username}}</a>
             </li>
             <li *ngIf="user" class="active">
-                <a id="logout-btn" (click)="Logout()" italic>Logout</a>
+                <a [routerLink]="['']" id="logout-btn" (click)="Logout()" italic>Logout</a>
             </li>
         </ul>
     </div>

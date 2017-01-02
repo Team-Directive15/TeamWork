@@ -18,13 +18,12 @@ import { Component } from '@angular/core';
 
 export class ProfileComponent {
     userinfo: string = localStorage.getItem('loggedUser') && JSON.parse(localStorage.getItem('loggedUser'));;
-    user: string = "blqblq";
-    email: string = "blqblq";
+    user: string = "No username!";
+    email: string = "No email!";
 
     ngOnInit() {
         var currentUser = localStorage.getItem('loggedUser') && JSON.parse(localStorage.getItem('loggedUser'));
         this.email = currentUser && currentUser.email;
         this.user = this.email.substr(0, this.email.indexOf('@'));
     }
-
 }

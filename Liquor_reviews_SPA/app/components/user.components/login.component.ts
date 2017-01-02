@@ -5,7 +5,18 @@ import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
     selector: 'login',
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    styles:[`
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;    
+        max-width: 100%;
+        width: auto\9;    
+        width: 600px;
+    }
+    `]
 })
 
 export class LoginComponent {
@@ -23,7 +34,7 @@ export class LoginComponent {
         this.authenticationServise.login(user)
             .then(() => {
                 localStorage.setItem('loggedUser', JSON.stringify({ email: this.model.email, password: this.model.password }));
-                setTimeout(() => this.router.navigate(['']), 2000);
+                this.router.navigate(['']);
             })
             .catch((error) => {
                 this.error = error.message
