@@ -6,6 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class SortPipe implements PipeTransform {
     transform(items: any[], sortBy?: string) {
+        if (!items) {
+            return;
+        }
+        
         if (sortBy) {
             if (sortBy.startsWith('-')) {
                 sortBy = sortBy.substr(1);
