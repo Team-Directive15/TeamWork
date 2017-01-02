@@ -7,11 +7,16 @@ import { Product } from '../models/product.model';
 export class ProductService {
 
     constructor(private af: AngularFire) { }
+    
     addNewProduct(product: Product) {
         return firebase.database().ref('products').push(product);
     }
 
     getAllProducts() {
         return this.af.database.list('products');
+    }
+
+    getProductByKey(key: string) {
+        return this.af.database.object('/products/'+ key);
     }
 }
