@@ -34,7 +34,9 @@ export class LoginComponent {
         this.authenticationServise.login(user)
             .then(() => {
                 localStorage.setItem('loggedUser', JSON.stringify({ email: this.model.email, password: this.model.password }));
+                location.reload();               
                 this.router.navigate(['']);
+                
             })
             .catch((error) => {
                 this.error = error.message

@@ -25,6 +25,7 @@ export class HeaderComponent {
         this.authenticationService.logout()
             .then(() => {
                 localStorage.removeItem('loggedUser');
+                location.reload();
                 this.router.navigate(['']);
             })
             .catch((error) => {
