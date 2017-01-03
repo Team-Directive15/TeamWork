@@ -6,7 +6,7 @@ import { AuthenticationService } from '../../services/authentication.service';
 @Component({
     selector: 'login',
     templateUrl: './login.component.html',
-    styles:[`
+    styles: [`
     .container {
         margin-left: auto;
         margin-right: auto;
@@ -33,7 +33,7 @@ export class LoginComponent {
     constructor(private router: Router, private authenticationServise: AuthenticationService) { }
 
     ngOnInit() {
-        this.model = new User('', '', false, []);
+        this.model = new User('', '', '', false, []);
     }
 
     login() {
@@ -41,9 +41,9 @@ export class LoginComponent {
         this.authenticationServise.login(user)
             .then(() => {
                 localStorage.setItem('loggedUser', JSON.stringify({ email: this.model.email, password: this.model.password }));
-                location.reload();               
+                location.reload();
                 this.router.navigate(['']);
-                
+
             })
             .catch((error) => {
                 this.error = error.message
