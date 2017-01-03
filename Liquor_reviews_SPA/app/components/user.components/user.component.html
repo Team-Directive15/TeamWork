@@ -1,21 +1,9 @@
-<div class="container">
-    <div class="row panel panel-default">
-        <div class="panel-heading text-right">
-            <span class="review-heading">Reviews by {{user.username}}</span>
-        </div>
-        <div class="row panel panel-info productinfo" *ngFor="let review of user.reviews">
-            <div class="col-sm-2 rating-panel">
-                <div class="panel panel-info">
-                    <div class="starpanel panel-body">
-                        <i class="glyphicon glyphicon-star" id="rating-star"></i>
-                        <p class="rating">{{review.rating}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="review-text jumbotron panel-body col-sm-9">
-                <p>For product: <a [routerLink]="['/product/', review.productId]">{{review.productName}}</a></p>
-                <p>{{review.text}}</p>
-            </div>
-        </div>
+<div class="specificUser panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">Profile of: {{user.username}}</h3>
+    </div>
+    <div class="panel-body">
+        <p>Email: {{user.email}}</p>
+        <p>IsExpert: {{user.expert}}</p>
     </div>
 </div>
