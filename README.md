@@ -6,9 +6,9 @@ Course project of team Directive15
 | Kamen Dabevski    |           Talic_Zealot             |
 | Todor Enikov      |           Enikov                   |
 
-### Link for YouTube preview video : https://www.youtube.com/watch?v=
+### Link for YouTube preview video : https://www.youtube.com/watch?v=2QFTGpzcDGc
 
-### Showcase project link : http://best.telerikacademy.com/projects/
+### Showcase project link : http://best.telerikacademy.com/projects/432/Liquor-Reviews
 
 ##  Project concept
 
