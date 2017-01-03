@@ -24,4 +24,14 @@ export class ProductService {
         let product = this.af.database.object('/products/'+ key);
         product.update({ reviews: object });
     }
+
+    updateUserRating(key: string, object: any) {
+        let product = this.af.database.object('/products/'+ key);
+        product.update({ userrating: object });
+    }
+
+    updateExpertRating(key: string, object: any) {
+        let product = this.af.database.object('/products/'+ key);
+        product.update({ exprating: object });
+    }
 }

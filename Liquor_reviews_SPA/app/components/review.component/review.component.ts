@@ -45,12 +45,25 @@ export class ReviewComponent {
 
     submit() {
         this.product.reviews.push(this.model);
-        this.productService.addReview(this._id, this.product.reviews)
+        this.productService.addReview(this._id, this.product.reviews);
+
+        let sum: number = 0;
+        for (var index = 0; index < this.product.reviews.length; index++) {
+            sum += this.product.reviews[index].rating;
+            console.log(this.product.reviews[index].rating);
+        }
+
+        let rating = sum / this.product.reviews.length;
+
+        console.log(rating.toFixed(1));
+
+        this.productService.updateUserRating(this._id, rating.toFixed(1));
+
         //then ??
         this.router.navigate(['product/' + this._id]);
     }
 
-    rate(rating: Number) {
+    rate(rating: number) {
         this.model.rating = rating;
     }
 }
