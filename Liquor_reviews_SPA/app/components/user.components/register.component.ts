@@ -13,9 +13,9 @@ import { AuthenticationService, UsersService } from '../../services';
 export class RegisterComponent {
     public model: User;
     public error: string = "";
-    public passwordPattern: string = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}";
-    public passwordTitle: string = "must contain at least one number and one uppercase and lowercase letter, and between 6 and 20 characters long";
-    //public emailPattern: string = "^[^<>?,\$]{5,20}";
+    public passwordPattern: string = "[0-9]{6,20}";
+    public passwordTitle: string = "must contain digits between 6 and 20 symbols long";
+    public emailPattern: string = "^[^<>?,\$]{5,20}";
     public emailTitle: string = "must be between 5 and 20 characters long";
 
     constructor(private router: Router, private authenticationService: AuthenticationService, private usersService: UsersService) { }
