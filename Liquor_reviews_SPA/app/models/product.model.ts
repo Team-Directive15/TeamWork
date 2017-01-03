@@ -4,13 +4,13 @@ export class Product {
     name: string;
     description: string;
     img: string;
-    userrating: Number;
-    exprating: Number;
+    userrating: string;
+    exprating: string;
     country: string;
     year: string;
     reviews: Review[];
 
-    constructor(name: string, img: string, userrating: Number, exprating: Number, country: string,  year: string, description: string, reviews:Review[]) {
+    constructor(name: string, img: string, userrating: string, exprating: string, country: string,  year: string, description: string, reviews:Review[]) {
         this.name = name;
         this.img = img;
         this.userrating = userrating;

@@ -1,13 +1,13 @@
 export class Review {
     authorName: string;
-    authorId: Number;
-    rating: Number;
+    authorId: number;
+    rating: number;
     text: string;
     expert: boolean;
     productName: string;
-    productId: Number;
+    productId: number;
 
-    constructor(authorName: string, authorId: Number, rating: Number, text: string, expert: boolean, productName: string, productId: Number) {
+    constructor(authorName: string, authorId: number, rating: number, text: string, expert: boolean, productName: string, productId: number) {
         this.authorName = authorName;
         this.authorId = authorId;
         this.rating = rating;
