@@ -7,6 +7,7 @@ import { Review } from '../../models/review.model';
 @Component({
     selector: 'users',
     templateUrl: './users.component.html',
+    providers:[UsersService],
     styleUrls: ['./users.component.css']
 })
 
@@ -19,14 +20,14 @@ export class UsersComponent {
 
     ngOnInit() {
         let allUsers: FirebaseListObservable<User>;
-        this.userservice.getAllUsers().subscribe(user => {allUsers.push(user)});
-        allUsers.forEach(user => {
-            if (user.expert) {
-                this.experts.push(user);
-            }
-            else {
-                this.users.push(user);
-            }
-        });
+        // this.userservice.getAllUsers().subscribe(user => {allUsers.push(user)});
+        // allUsers.forEach(user => {
+        //     if (user.expert) {
+        //         this.experts.push(user);
+        //     }
+        //     else {
+        //         this.users.push(user);
+        //     }
+        // });
     }
 }

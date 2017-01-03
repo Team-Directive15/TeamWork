@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../models/user.model';
 import { Review } from '../../models/review.model';
+import { UsersService } from '../../services';
 
 @Component({
     selector: 'user',
-    templateUrl: './user.component.html'
+    templateUrl: './user.component.html',
+    providers: [UsersService]
 })
 
 export class UserComponent {
