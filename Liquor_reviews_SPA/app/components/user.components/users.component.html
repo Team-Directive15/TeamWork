@@ -1,4 +1,4 @@
-<div class="panel panel-info" *ngFor="let user of( users | async)">
+<div class="allUsers panel panel-info" *ngFor="let user of( users | async)">
     <div class="panel-body">
         <a [routerLink]="['/users/', user.$key]">User: {{user.username}}</a>
     </div>

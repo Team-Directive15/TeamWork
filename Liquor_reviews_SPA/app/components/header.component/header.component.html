@@ -12,7 +12,7 @@
             <li class="active">
                 <a [routerLink]="['products']" id="users-btn" italic>Products</a>
             </li>
-            <li class="active">
+            <li *ngIf="user" class="active">
                 <a [routerLink]="['users']" id="users-btn" italic>Users</a>
             </li>
             <li class="active">
