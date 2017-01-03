@@ -41,7 +41,7 @@ export class NewProductComponent implements OnInit {
             this.years.push(i.toString());
         }
 
-        this.model = new Product('', '', 0, 0, '', '', '', []);
+        this.model = new Product('', '', 0, 0, 'bg', '1999', '', []);
         this.countries = this._countriesService.getCountries();
     }
 

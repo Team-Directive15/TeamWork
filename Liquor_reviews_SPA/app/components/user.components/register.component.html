@@ -6,7 +6,7 @@
                     <h3 class="panel-title">Register</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" #registerForm="ngForm" (ngSubmit)="register()">
+                    <form class="form-horizontal" #registerForm="ngForm" (ngSubmit)="email.valid && password.valid && register()">
                         <div *ngIf="registerForm.submitted && error!=''" class="help-block">{{error}}</div>
                         <div [hidden]="email.valid || email.untouched" class="error-msg">Email {{emailTitle}}</div>
                         <div [hidden]="password.valid || password.untouched" class="error-msg">Password {{passwordTitle}}</div>

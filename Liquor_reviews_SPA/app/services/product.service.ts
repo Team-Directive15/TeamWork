@@ -19,4 +19,9 @@ export class ProductService {
     getProductByKey(key: string) {
         return this.af.database.object('/products/'+ key);
     }
+
+    addReview(key: string, object: any) {
+        let product = this.af.database.object('/products/'+ key);
+        product.update({ reviews: object });
+    }
 }

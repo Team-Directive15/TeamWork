@@ -10,4 +10,9 @@ export class UsersService {
     getAllUsers() {
         return this.af.database.list('users');
     }
+
+    addReview(key: string, object: any) {
+        let product = this.af.database.object('/users/' + key);
+        product.update({ reviews: object });
+    }
 }
