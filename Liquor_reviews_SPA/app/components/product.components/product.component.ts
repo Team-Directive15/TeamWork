@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit {
     public product: Product;
     private _route: ActivatedRoute;
     private _id: string;
+    user: boolean = localStorage.getItem('loggedUser') ? true : false;
 
     constructor(route: ActivatedRoute, private productService: ProductService) {
         this._route = route;

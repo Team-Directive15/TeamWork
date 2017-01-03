@@ -26,7 +26,7 @@
             </div>
             <div class="productinfosmall col-sm-5">
                 <div>
-                    <a [routerLink]="['/product/', product.$key]">name: {{product.name}}</a>
+                    <a [routerLink]="['/product/', product.$key]">name: {{product.name | capitalize}}</a>
                 </div>
                 <div>User rating: {{product.userrating}}</div>
                 <div>Expert rating: {{product.exprating}}</div>
