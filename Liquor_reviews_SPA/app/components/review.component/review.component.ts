@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Review } from '../../models/review.model';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services';
+import { Product } from '../../models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'review',
@@ -14,23 +16,38 @@ import { ProductService } from '../../services';
 })
 
 export class ReviewComponent {
+    public error: string = "";
     public model: Review;
+    public product: Product;
     public textPattern: string = "^[^<>?,\$]{10,200}";
     public textTitle: string = "must be between 10 and 200 characters long";
+    public username: string;
     private _route: ActivatedRoute;
     private _id: string;
 
-    constructor(route: ActivatedRoute, private productService: ProductService) {
+    constructor(private router: Router, route: ActivatedRoute, private productService: ProductService) {
         this._route = route;
     }
 
     ngOnInit() {
-        this.model = new Review('', 0, 0, '', false, '', 0);
+        let user = localStorage.getItem('loggedUser') ? true : false;
+        let currentUser = localStorage.getItem('loggedUser') && JSON.parse(localStorage.getItem('loggedUser'));
+        let email = currentUser && currentUser.email;
+        this.username = email.substr(0, email.indexOf('@'));
+
+        this.model = new Review(this.username, 0, 1, '', false, '', 0);
+        this._route.params.subscribe(result => this._id = result['id']);
+        this.productService.getProductByKey(this._id).subscribe(product => this.product = product);
+        if (!this.product.reviews) {
+            this.product.reviews = [];
+        }
     }
 
     submit() {
-        // this._route.params.subscribe(result => this._id = result['id']);
-        // this.productService.getProductByKey(this._id).subscribe(result => result.reviews.push(this.model));
+        this.product.reviews.push(this.model);
+        this.productService.addReview(this._id, this.product.reviews)
+        //then ??
+        this.router.navigate(['product/' + this._id]);
     }
 
     rate(rating: Number) {
